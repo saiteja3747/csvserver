@@ -258,3 +258,40 @@ Copy the docker-compose.yaml to the solution directory.
 
 
 Commit and push the changes to your repository on GitHub.
+
+
+
+
+PART -3
+
+
+Delete any containers running from the last part.
+
+
+
+1.Add Prometheus container (prom/prometheus:v2.22.0) to the docker-compose.yaml form part II.
+
+HINT : Add prometheus container to the docker-compose.yml
+
+
+
+2.Configure Prometheus to collect data from our application at <application>:<port>/metrics endpoint. (Where the <port> is the port from I.5)
+	
+HINT: Pull the config of prometheus image and makes changes in scrape and fill the ip adress of the application and save the changes in prometheus.yml
+	
+	
+	
+3.Make sure that Prometheus is accessible at http://localhost:9090 on the host.
+	
+HINT: run this command
+	
+	  docker run -d -v `pwd`/prometheus.yml:/etc/prometheus/prometheus.yml -p 9090:9090 [ image id ]
+	
+	
+4.Type csvserver_records in the query box of Prometheus. Click on Execute and then switch to the Graph tab.
+	
+	
+HINT : Make changes in the time graph update it to 5 mins.
+	
+	
+The Prometheus instance should be accessible at http://localhost:9090, and it should show a straight line graph with value 10 (consider shrinking the time range to 5m).
