@@ -262,7 +262,7 @@ Commit and push the changes to your repository on GitHub.
 
 
 
-                                                                       PART -3
+                                                                PART -3
 
 
 Delete any containers running from the last part.
